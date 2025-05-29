@@ -1,0 +1,95 @@
+==52== Memcheck, a memory error detector
+==52== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==52== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==52== Command: ./bin/test_cont
+==52== 
+==52== Conditional jump or move depends on uninitialised value(s)
+==52==    at 0x109730: pointerMalloc (pointer.c:49)
+==52==    by 0x10A2A2: contiguousMalloc (contiguous_pointer.c:50)
+==52==    by 0x10A931: testMalloc (test_contiguous.c:24)
+==52==    by 0x10B77A: main (test_contiguous.c:244)
+==52==  Uninitialised value was created by a heap allocation
+==52==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==52==    by 0x10973B: pointerMalloc (pointer.c:54)
+==52==    by 0x10A2A2: contiguousMalloc (contiguous_pointer.c:50)
+==52==    by 0x10A931: testMalloc (test_contiguous.c:24)
+==52==    by 0x10B77A: main (test_contiguous.c:244)
+==52== 
+==52== Conditional jump or move depends on uninitialised value(s)
+==52==    at 0x109730: pointerMalloc (pointer.c:49)
+==52==    by 0x10A2A2: contiguousMalloc (contiguous_pointer.c:50)
+==52==    by 0x10A9C2: testMalloc (test_contiguous.c:32)
+==52==    by 0x10B77A: main (test_contiguous.c:244)
+==52==  Uninitialised value was created by a heap allocation
+==52==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==52==    by 0x10973B: pointerMalloc (pointer.c:54)
+==52==    by 0x10A2A2: contiguousMalloc (contiguous_pointer.c:50)
+==52==    by 0x10A931: testMalloc (test_contiguous.c:24)
+==52==    by 0x10B77A: main (test_contiguous.c:244)
+==52== 
+==52== Conditional jump or move depends on uninitialised value(s)
+==52==    at 0x10986E: pointerFree (pointer.c:102)
+==52==    by 0x10A313: contiguousMalloc (contiguous_pointer.c:63)
+==52==    by 0x10A9C2: testMalloc (test_contiguous.c:32)
+==52==    by 0x10B77A: main (test_contiguous.c:244)
+==52==  Uninitialised value was created by a heap allocation
+==52==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==52==    by 0x10973B: pointerMalloc (pointer.c:54)
+==52==    by 0x10A2A2: contiguousMalloc (contiguous_pointer.c:50)
+==52==    by 0x10A9C2: testMalloc (test_contiguous.c:32)
+==52==    by 0x10B77A: main (test_contiguous.c:244)
+==52== 
+==52== Conditional jump or move depends on uninitialised value(s)
+==52==    at 0x10986E: pointerFree (pointer.c:102)
+==52==    by 0x10A419: contiguousFree (contiguous_pointer.c:94)
+==52==    by 0x10B3EF: testFree (test_contiguous.c:191)
+==52==    by 0x10B819: main (test_contiguous.c:255)
+==52==  Uninitialised value was created by a heap allocation
+==52==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==52==    by 0x10973B: pointerMalloc (pointer.c:54)
+==52==    by 0x10A2A2: contiguousMalloc (contiguous_pointer.c:50)
+==52==    by 0x10A9C2: testMalloc (test_contiguous.c:32)
+==52==    by 0x10B77A: main (test_contiguous.c:244)
+==52== 
+==52== Invalid read of size 8
+==52==    at 0x109867: pointerFree (pointer.c:102)
+==52==    by 0x109A33: pointerCompleteDeallocateHelper (pointer.c:175)
+==52==    by 0x109A7E: pointerCompleteDeallocate (pointer.c:192)
+==52==    by 0x10A79F: completeDeallocation (contiguous_pointer.c:203)
+==52==    by 0x10B541: testFree (test_contiguous.c:216)
+==52==    by 0x10B819: main (test_contiguous.c:255)
+==52==  Address 0x4a8a4e8 is 24 bytes inside a block of size 32 free'd
+==52==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==52==    by 0x109858: pointerFree (pointer.c:97)
+==52==    by 0x109A33: pointerCompleteDeallocateHelper (pointer.c:175)
+==52==    by 0x109A7E: pointerCompleteDeallocate (pointer.c:192)
+==52==    by 0x10A79F: completeDeallocation (contiguous_pointer.c:203)
+==52==    by 0x10B541: testFree (test_contiguous.c:216)
+==52==    by 0x10B819: main (test_contiguous.c:255)
+==52==  Block was alloc'd at
+==52==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==52==    by 0x109665: initializeBlockPointer (pointer.c:19)
+==52==    by 0x10A1C4: initializeContiguous (contiguous_pointer.c:24)
+==52==    by 0x10B708: main (test_contiguous.c:238)
+==52== 
+==52== Conditional jump or move depends on uninitialised value(s)
+==52==    at 0x109A94: pointerCompleteDeallocate (pointer.c:188)
+==52==    by 0x10A79F: completeDeallocation (contiguous_pointer.c:203)
+==52==    by 0x10B541: testFree (test_contiguous.c:216)
+==52==    by 0x10B819: main (test_contiguous.c:255)
+==52==  Uninitialised value was created by a heap allocation
+==52==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==52==    by 0x10973B: pointerMalloc (pointer.c:54)
+==52==    by 0x10A2A2: contiguousMalloc (contiguous_pointer.c:50)
+==52==    by 0x10A9C2: testMalloc (test_contiguous.c:32)
+==52==    by 0x10B77A: main (test_contiguous.c:244)
+==52== 
+==52== 
+==52== HEAP SUMMARY:
+==52==     in use at exit: 0 bytes in 0 blocks
+==52==   total heap usage: 92 allocs, 92 frees, 7,381 bytes allocated
+==52== 
+==52== All heap blocks were freed -- no leaks are possible
+==52== 
+==52== For lists of detected and suppressed errors, rerun with: -s
+==52== ERROR SUMMARY: 43 errors from 6 contexts (suppressed: 0 from 0)
