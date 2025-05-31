@@ -8,15 +8,12 @@
 
 ### Part 1: Abstracting Contiguous Memory
 
-1.  Navigate to the `Part01` directory:
-    ```bash
-    cd Part01
-    ```
-2.  To compile all source files for Part 1:
+
+1.  To compile all source files:
     ```bash
     make
     ```
-3.  To run the test cases for each sub-part:
+2.  To run the test cases for each sub-part:
     *   Part 1.1 (Record Keeping - block.c):
         ```bash
         make run_block
@@ -33,7 +30,7 @@
         ```bash
         make run_contiguous
         ```
-4.  To clean up compiled files:
+3.  To clean up compiled files:
     ```bash
     make clean
     ```
