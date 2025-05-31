@@ -1,8 +1,8 @@
 # CS200-Contingos-intator
 # Programming Project 01 - C Programming (CS200/EE201)
 
-1.  **Part 1: Abstracting Contiguous Memory:**
-    You will implement a custom memory management library. This library will abstract multiple, potentially non-contiguous memory allocations to make them appear and behave as a single, contiguous block of memory. It involves creating layers for record-keeping, contiguous abstraction, mapping for independent access, and a custom contiguous pointer.
+1.  **Abstracting Contiguous Memory:**
+    I implemented a custom memory management library. This library will abstract multiple, potentially non-contiguous memory allocations to make them appear and behave as a single, contiguous block of memory. It involves creating layers for record-keeping, contiguous abstraction, mapping for independent access, and a custom contiguous pointer.
 
 ## How to Run
 
